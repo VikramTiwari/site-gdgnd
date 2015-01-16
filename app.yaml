@@ -1,0 +1,29 @@
+application: gdgnd-site
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /
+  static_files: index.html
+  upload: index.html
+
+- url: /app.js
+  static_files: app.js
+  upload: app.js
+
+- url: /favicon.ico
+  static_files: theme.css
+  upload: theme.css
+
+- url: /images/(.*)
+  static_files: images/\1
+  upload: images/.*
+
+- url: /icons/(.*)
+  static_files: icons/\1
+  upload: icons/.*
+
+skip_files:
+- ^(.*/)?node_modules/.*
