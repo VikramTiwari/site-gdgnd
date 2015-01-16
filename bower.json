@@ -1,0 +1,28 @@
+{
+  "name": "gdgnd-site",
+  "version": "0.0.1",
+  "homepage": "https://github.com/VikramTiwari/site-gdgnd",
+  "authors": [
+    "Vikram Tiwari <Vikramtheone1@gmail.com>"
+  ],
+  "description": "GDG ND Website",
+  "main": "app.js",
+  "keywords": [
+    "GDG",
+    "New",
+    "Delhi",
+    "Polymer"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.2"
+  }
+}
