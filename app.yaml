@@ -17,6 +17,10 @@ handlers:
   static_files: theme.css
   upload: theme.css
 
+- url: /bower_components/(.*)
+  static_files: bower_components/\1
+  upload: bower_components/.*
+
 - url: /images/(.*)
   static_files: images/\1
   upload: images/.*
