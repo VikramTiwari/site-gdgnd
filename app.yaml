@@ -9,6 +9,10 @@ handlers:
   static_files: index.html
   upload: index.html
 
+- url: /custom/(.*)
+  static_files: custom/\1
+  upload: custom/.*
+
 - url: /app.js
   static_files: app.js
   upload: app.js
@@ -20,6 +24,14 @@ handlers:
 - url: /bower_components/(.*)
   static_files: bower_components/\1
   upload: bower_components/.*
+
+- url: /service/(.*)
+  static_files: service/\1
+  upload: service/.*
+
+- url: /api/(.*)
+  static_files: api/\1
+  upload: api/.*
 
 - url: /images/(.*)
   static_files: images/\1

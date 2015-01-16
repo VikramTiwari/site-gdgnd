@@ -1,12 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 <head>
 
-  <title>GDG-ND</title>
+  <title>unquote</title>
 
-  <meta name="viewport" 
-  content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
 
   <script src="../bower_components/webcomponentsjs/webcomponents.js">
   </script>
@@ -18,6 +17,7 @@
     href="../bower_components/core-toolbar/core-toolbar.html">
   <link rel="import"
     href="../bower_components/paper-tabs/paper-tabs.html">
+  <link rel="import" href="../custom/post-list.html">
 
   <style>
   html,body {
@@ -42,7 +42,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    text-transform: uppercase;
+  text-transform: uppercase;
   }
   .container {
     width: 80%;
@@ -61,6 +61,7 @@
 </head>
 
 <body unresolved>
+
   <core-header-panel>
 
     <core-toolbar>
@@ -72,15 +73,19 @@
 
     </core-toolbar>
 
-    <!-- main page content will go here -->
+    <div class="container" layout vertical center>
+      <post-list show="all"></post-list>
+    </div>
 
   </core-header-panel>
-  
+
   <script>
-    var tabs = document.querySelector('paper-tabs');
-    tabs.addEventListener('core-select', function(e) {
-      console.log("Selected: " + tabs.selected);
-    });
+  var tabs = document.querySelector('paper-tabs');
+  var list = document.querySelector('post-list');
+
+  tabs.addEventListener('core-select', function() {
+    list.show = tabs.selected;
+  });
   </script>
 </body>
 
