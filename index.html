@@ -4,9 +4,22 @@
 <head>
     <title>GDG New Delhi</title>
     <link rel="import" href="/bower_components/app-router/app-router.html">
+    <link rel="import" href="/bower_components/font-roboto/roboto.html">
+
+    <style type="text/css">
+    body {
+        font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+        font-size: 14px;
+        margin: 0;
+        padding: 24px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-touch-callout: none;
+    }
+    </style>
 </head>
 
 <body>
+
     <app-router>
         <app-route path="/" import="/pages/gdgnd/gdgnd-splash-screen.html"></app-route>
         <app-route path="/home" import="/pages/gdgnd/gdgnd-home-page.html"></app-route>
