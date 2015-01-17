@@ -5,7 +5,7 @@
   "authors": [
     "Vikram Tiwari <Vikramtheone1@gmail.com>"
   ],
-  "description": "GDG ND Website",
+  "description": "Polymer Based Seed Website",
   "main": "app.js",
   "keywords": [
     "GDG",
