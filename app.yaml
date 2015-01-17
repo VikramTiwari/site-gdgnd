@@ -12,6 +12,10 @@ handlers:
   static_files: custom/\1
   upload: custom/.*
 
+- url: /pages/(.*)
+  static_files: pages/\1
+  upload: pages/.*
+
 - url: /app.js
   static_files: app.js
   upload: app.js

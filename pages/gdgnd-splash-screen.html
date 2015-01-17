@@ -3,6 +3,7 @@
 <link rel="import" href="../bower_components/core-icons/core-icons.html">
 <link rel="import" href="../bower_components/core-icons/av-icons.html">
 <link rel="import" href="../bower_components/paper-fab/paper-fab.html">
+<link rel="import" href="../bower_components/app-router/app-router.html">
 
 <polymer-element name="gdgnd-splash-screen">
 
@@ -12,7 +13,6 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            box-sizing: border-box;
         }
         #splash-screen {
             box-sizing: border-box;
@@ -57,7 +57,7 @@
                 <span id="tagline">GDG - New Delhi</span>
             </div>
             <div id="action" class="fab fab-0">
-                <a href="gdg-landing-page.html">
+                <a href="/#/home">
                     <paper-fab icon="av:play-arrow" id="play" cross-fade-delayed></paper-fab>
                 </a>
             </div>

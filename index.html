@@ -2,33 +2,21 @@
 <html>
 
 <head>
-
-  <title>GDG - ND</title>
-
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-
-  <script src="../bower_components/webcomponentsjs/webcomponents.js">
-  </script>
-
-  <link rel="import" href="../bower_components/font-roboto/roboto.html">
-  <link rel="import" href="../custom/gdgnd-splash-screen.html">
-
-
-  <style>
-  html,body {
-    height: 100%;
-    margin: 0;
-    background-color: #E5E5E5;
-    font-family: 'RobotoDraft', sans-serif;
-  }
-  </style>
-
+    <title>GDG New Delhi</title>
+    <link rel="import" href="/bower_components/app-router/app-router.html">
 </head>
 
-<body unresolved>
-  <gdgnd-splash-screen></gdgnd-splash-screen>
-  <script>
-  </script>
+<body>
+    <app-router>
+        <app-route path="/" import="/pages/gdgnd-splash-screen.html"></app-route>
+        <app-route path="/home" import="/pages/gdgnd-home-page.html"></app-route>
+        <app-route path="/about" import="/pages/gdgnd-about-page.html"></app-route>
+        <app-route path="/events" import="/pages/gdgnd-events-page.html"></app-route>
+        <app-route path="/activities" import="/pages/gdgnd-activities-page.html"></app-route>
+        <app-route path="/social" import="/pages/gdgnd-social-page.html"></app-route>
+        <app-route path="/organizers" import="/pages/gdgnd-organizers-page.html"></app-route>
+        <app-route path="/involve" import="/pages/gdgnd-involve-page.html"></app-route>
+    </app-router>
 </body>
 
 </html>
