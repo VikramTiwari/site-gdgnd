@@ -14,8 +14,8 @@ handlers:
   upload: pages/.*
 
 - url: /favicon.ico
-  static_files: theme.css
-  upload: theme.css
+  static_files: favicon.ico
+  upload: favicon.ico
 
 - url: /bower_components/(.*)
   static_files: bower_components/\1
