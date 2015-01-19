@@ -3,20 +3,23 @@ Polymer based GDG New Delhi website
 
 How to run on localhost
 -----------------------
-
-Using Python 2.x
+Install bower dependencies
+```
+[sudo] bower install
+```
+Now run a localhost server using Python 2.x
 ```
 python -m SimpleHTTPServer
 ```
-
-Using App Engine
+or using App Engine
 ```
 gcloud app preview run .
 ```
 
-How to deploy on App Engine
----------------------------
+How to publish on App Engine using release pipelines
+----------------------------------------------------
 1. [Make a project on app engine](http://console.developers.google.com/)
+2. [Change the name of application in app.yaml](https://github.com/VikramTiwari/site-gdgnd/blob/master/app.yaml#L1)
 2. [Install gcloud command line utils](https://cloud.google.com/sdk/gcloud/)
 3. [Get authentication token](https://cloud.google.com/sdk/gcloud/#gcloud.auth)
 4. [Install app engine component](https://cloud.google.com/sdk/gcloud/#gcloud.components)
