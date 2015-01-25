@@ -1,0 +1,32 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/core-ajax/core-ajax.html">
+
+<polymer-element name="gplus-events-service" attributes="result">
+  <template>
+    <style>
+    :host {
+      display: none;
+    }
+    </style>
+    <!-- id = 102753048484564707718, 114576537688641864561
+    api key = AIzaSyDLfKqoprr6LT805Cs-kWu7fj3gZuprdDI -->
+    <core-ajax id="ajax"
+      auto
+      url='http://hub.gdgx.io/api/v1/chapters/114576537688641864561/events/upcoming?key=AIzaSyDLfKqoprr6LT805Cs-kWu7fj3gZuprdDI'
+      on-core-response="{{loaded}}"
+      handleAs="json">
+    </core-ajax>
+  </template>
+  <script>
+  Polymer('gplus-events-service', {
+    created: function() {
+      this.result = [];
+    },
+    loaded: function() {
+      // Make a copy of the loaded data
+      this.result = this.$.ajax.response;
+      console.log('result:', this.$.ajax.response);
+    }
+  });
+  </script>
+</polymer-element>
