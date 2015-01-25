@@ -2,10 +2,12 @@
 <link rel="import" href="/bower_components/core-scroll-header-panel/demos/sample-content.html">
 <link rel="import" href="/bower_components/core-toolbar/core-toolbar.html">
 <link rel="import" href="/bower_components/core-icon-button/core-icon-button.html">
+<link rel="import" href="/service/gplus-social-service.html">
 
 <polymer-element name="gdgnd-social-page">
 
     <template>
+        <gplus-social-service id="service" result="{{result}}"></gplus-social-service>
         <style>
         core-scroll-header-panel {
             position: absolute;
@@ -77,9 +79,18 @@
                             <li><a href="https://plus.google.com/114576537688641864561/posts">Google Plus Page</li>
                             <li><a href="https://plus.google.com/communities/100724337168713741685">G+ Commnuity Page</li>
                             <li><a href="https://www.facebook.com/gdgnewdelhi">Facebook Page</li>
-                            <li><a href="https://github.com/gdgnd">GitHub Community</a></li>
+                            <li><a href="https://github.com/gdgnd">GitHub Community</a>
+                            </li>
                         </ul>
                     </div>
+                </core-card>
+                <core-card id="core_card" layout vertical>
+                    <h3>G+ Page Feed</h3>
+                    <template repeat="{{item in result.items}}">
+                        <core-card id="core_card" layout vertical>
+                            <a href="{{item.url}}"><b>{{item.title}}</b></a>
+                        </core-card>
+                    </template>
                 </core-card>
             </div>
         </core-scroll-header-panel>
