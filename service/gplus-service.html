@@ -8,9 +8,11 @@
       display: none;
     }
     </style>
+    <!-- id = 102753048484564707718, 114576537688641864561
+    api key = AIzaSyDLfKqoprr6LT805Cs-kWu7fj3gZuprdDI -->
     <core-ajax id="ajax"
       auto
-      url="http://54.243.149.109:8080/test"
+      url='https://www.googleapis.com/plus/v1/people/114576537688641864561?key=AIzaSyDLfKqoprr6LT805Cs-kWu7fj3gZuprdDI'
       on-core-response="{{loaded}}"
       handleAs="json">
     </core-ajax>
@@ -23,7 +25,7 @@
     loaded: function() {
       // Make a copy of the loaded data
       this.result = this.$.ajax.response;
-      console.log(this.$.ajax.response);
+      console.log('result:', this.$.ajax.response);
     }
   });
   </script>
