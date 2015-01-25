@@ -27,3 +27,8 @@
 # Social Page
 
 [] Add twitter and fb feed on the organizers page
+
+# Backend
+
+[] Make config file for key and other configs
+[] Make APIs for events, organizers
