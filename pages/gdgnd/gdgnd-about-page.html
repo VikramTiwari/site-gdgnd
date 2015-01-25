@@ -2,10 +2,11 @@
 <link rel="import" href="/bower_components/core-scroll-header-panel/demos/sample-content.html">
 <link rel="import" href="/bower_components/core-toolbar/core-toolbar.html">
 <link rel="import" href="/bower_components/core-icon-button/core-icon-button.html">
+<link rel="import" href="/service/gplus-about-service.html">
 
 <polymer-element name="gdgnd-about-page">
-
     <template>
+        <gplus-about-service id="service" result="{{result}}"></gplus-about-service>
         <style>
         a {
             color: #f1f1f1;
@@ -57,15 +58,18 @@
             padding: 8px;
         }
         </style>
+
         <core-scroll-header-panel condenses>
 
             <core-toolbar class="tall">
 
-                <a href="/#/home"><core-icon-button icon="arrow-back"></core-icon-button></a>
+                <a href="/#/home">
+                    <core-icon-button icon="arrow-back"></core-icon-button>
+                </a>
                 <div flex></div>
                 <core-icon-button icon="search"></core-icon-button>
                 <core-icon-button icon="more-vert"></core-icon-button>
-                <div class="bottom indent title">About</div>
+                <div class="bottom indent title">About - {{result.displayName}}</div>
 
             </core-toolbar>
 
