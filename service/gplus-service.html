@@ -1,0 +1,30 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/core-ajax/core-ajax.html">
+
+<polymer-element name="gplus-service" attributes="result">
+  <template>
+    <style>
+    :host {
+      display: none;
+    }
+    </style>
+    <core-ajax id="ajax"
+      auto
+      url="http://54.243.149.109:8080/test"
+      on-core-response="{{loaded}}"
+      handleAs="json">
+    </core-ajax>
+  </template>
+  <script>
+  Polymer('gplus-service', {
+    created: function() {
+      this.result = [];
+    },
+    loaded: function() {
+      // Make a copy of the loaded data
+      this.result = this.$.ajax.response;
+      console.log(this.$.ajax.response);
+    }
+  });
+  </script>
+</polymer-element>
