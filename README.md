@@ -1,4 +1,4 @@
-# Site-GDGND
+# Site-GDGND - An Amazing Website
 Polymer based GDG New Delhi website
 
 How to run on localhost
